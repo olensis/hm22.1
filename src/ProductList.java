@@ -1,12 +1,23 @@
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Objects;
-import java.util.Set;
 
-public class ProductList {
+public class ProductList extends Recipes {
    private String name;
    private int cost;
    private int weight;
    private boolean bought = false;
+
+   public ProductList(ProductList productList) {
+      super();
+
+   }
+   public ProductList(String nameRecipes, HashMap<ProductList, Integer> products) {
+      super(nameRecipes, products);
+   }
+
+   public ProductList() {
+
+   }
 
    @Override
    public String toString() {
@@ -31,6 +42,7 @@ public class ProductList {
    }
 
    public ProductList(String name, int cost, int weight) {
+      super(name,cost,weight);
       this.name = name;
       this.cost = cost;
       this.weight = weight;
