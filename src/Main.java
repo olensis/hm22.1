@@ -1,6 +1,5 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,6 +42,36 @@ public class Main {
 
 
 // какой лучше и правильнее??
+
+        // задание 3
+        Set <Integer> numbers = new HashSet<Integer>(20);
+        numbers.add(999);
+        numbers.add(100);
+        numbers.add(3);
+        numbers.add(555);
+        numbers.add(6);
+        numbers.add(777);
+        numbers.add(8);
+        numbers.add(996);
+        numbers.add(10);
+        numbers.add(11);
+        numbers.add(27);
+        numbers.add(12);
+        numbers.add(13);
+        numbers.add(144);
+        numbers.add(15);
+        numbers.add(168);
+        numbers.add(17);
+        numbers.add(189);
+        numbers.add(19);
+        Integer[] arrayNumbers = numbers.toArray(new Integer[numbers.size()]);
+        Random rndm = new Random();
+        int rndmNumber = rndm.nextInt(numbers.size());
+        numbers.removeIf(integer -> integer%2!=0);
+        System.out.println(numbers.toString());
+
+
+
 
 
 
