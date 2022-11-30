@@ -44,26 +44,12 @@ public class Main {
 // какой лучше и правильнее??
 
         // задание 3
+        int[] number = {999,100,3, 555, 6,777, 8, 996, 10,11,12,13,144,15,168,17,189,19};
         Set <Integer> numbers = new HashSet<Integer>(20);
-        numbers.add(999);
-        numbers.add(100);
-        numbers.add(3);
-        numbers.add(555);
-        numbers.add(6);
-        numbers.add(777);
-        numbers.add(8);
-        numbers.add(996);
-        numbers.add(10);
-        numbers.add(11);
-        numbers.add(27);
-        numbers.add(12);
-        numbers.add(13);
-        numbers.add(144);
-        numbers.add(15);
-        numbers.add(168);
-        numbers.add(17);
-        numbers.add(189);
-        numbers.add(19);
+        for (int v:number){
+            numbers.add(v);
+        }
+
         Integer[] arrayNumbers = numbers.toArray(new Integer[numbers.size()]);
         Random rndm = new Random();
         int rndmNumber = rndm.nextInt(numbers.size());
